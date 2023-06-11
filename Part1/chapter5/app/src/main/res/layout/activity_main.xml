@@ -8,12 +8,150 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/tv_equation"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="equation"
+        android:textSize="30sp"
+        android:textColor="@color/defaultText"
+        android:gravity="end"
+        android:padding="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tv_result" />
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="result"
+        android:textSize="36sp"
+        android:textColor="@color/defaultText"
+        android:gravity="end"
+        android:padding="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_equation"
+        app:layout_constraintBottom_toTopOf="@+id/flowKeypad" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flowKeypad"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.7"
+        app:layout_constraintVertical_bias="1"
+        app:flow_maxElementsWrap="4"
+        app:flow_wrapMode="chain"
+        app:flow_horizontalGap="10dp"
+        android:padding="10dp"
+        app:constraint_referenced_ids="btn_1, btn_2, btn_3, btn_clear,
+                                       btn_4, btn_5, btn_6, btn_plus,
+                                       btn_7, btn_8, btn_9, btn_minus,
+                                       btn_0, btn_equal" />
+
+    <Button
+        android:id="@+id/btn_1"
+        android:text="1"
+        style="@style/numberKeypad"
+        android:onClick="numberClicked"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_2"
+        android:text="2"
+        style="@style/numberKeypad"
+        android:onClick="numberClicked"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_3"
+        android:text="3"
+        style="@style/numberKeypad"
+        android:onClick="numberClicked"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_4"
+        android:text="4"
+        style="@style/numberKeypad"
+        android:onClick="numberClicked"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_5"
+        android:text="5"
+        style="@style/numberKeypad"
+        android:onClick="numberClicked"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_6"
+        android:text="6"
+        style="@style/numberKeypad"
+        android:onClick="numberClicked"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_7"
+        android:text="7"
+        style="@style/numberKeypad"
+        android:onClick="numberClicked"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_8"
+        android:text="8"
+        style="@style/numberKeypad"
+        android:onClick="numberClicked"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_9"
+        android:text="9"
+        style="@style/numberKeypad"
+        android:onClick="numberClicked"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_0"
+        android:text="0"
+        style="@style/numberKeypad"
+        android:onClick="numberClicked"
+        app:layout_constraintHorizontal_weight="1"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_equal"
+        android:text="="
+        style="@style/operatorKeyPad"
+        android:onClick="equalClicked"
+        app:layout_constraintHorizontal_weight="3"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_clear"
+        android:text="C"
+        style="@style/operatorKeyPad"
+        android:onClick="clearClicked"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_plus"
+        android:text="+"
+        style="@style/operatorKeyPad"
+        android:onClick="operatorClicked"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_minus"
+        android:text="-"
+        style="@style/operatorKeyPad"
+        android:onClick="operatorClicked"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
