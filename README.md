@@ -1,8 +1,9 @@
 # 35개 프로젝트로 배우는 Android 앱 개발
 
-‣ 각종 아키텍처와 디자인 패턴의 구분을 통해 구조적으로 완전한 앱을 만드는 방법에 대해 학습
+> 각종 아키텍처와 디자인 패턴의 구분을 통해 구조적으로 완전한 앱을 만드는 방법에 대해 학습
 
-‣ Compose와 Xml의 차이와 Compose의 실전 활용법 등 Jetpack Compose에 대해 학습
+> Compose와 Xml의 차이와 Compose의 실전 활용법 등 Jetpack Compose에 대해 학습
+
 
 ### Part 0. 안드로이드 앱 개발 시작에 앞서
 - [Kotlin의 전반적인 특징](https://github.com/damon-911/FastCampus/tree/main/Part0/chapter1)
