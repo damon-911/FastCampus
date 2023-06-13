@@ -1,13 +1,13 @@
 # Kotlin의 전반적인 특징
 
-### 1. Lambda (람다)
+### [1. Lambda (람다)](http://developer.android.com/codelabs/basic-android-kotlin-compose-function-types-and-lambda)
 
 
-### 2. Extension Function (확장함수)
+### [2. Extension Function (확장 함수)](https://kotlinlang.org/docs/extensions.html#extension-functions)
 
 
-### 3. Scope Function (범위 지정함수)
-- 코틀린 표준 라이브러리에서 제공하는 확장함수
+### [3. Scope Function (범위 지정 함수)](https://kotlinlang.org/docs/scope-functions.html)
+- 코틀린 표준 라이브러리에서 제공하는 확장 함수
 - 목적 : 간결성, 명료성, 유지보수 용이성
 - 정의 : 객체의 컨텍스트 내에서, 실행 가능한 코드 블럭을 만드는 함수
     - 호출 시, 임시 범위가 생성되며, 이 범위 안에서는 이름 없이 객체에 접근가능
@@ -27,19 +27,19 @@
 - with : 객체 초기화, 람다 리턴 값이 필요 없을 때
 
 
-### 4. 초기화 지연 lateinit, lazy
+### [4. lateinit, lazy (초기화 지연)](https://www.geeksforgeeks.org/lateinit-vs-lazy-property-in-kotlin/)
 - 정의 : 변수를 선언할 때 값을 지정하지 않고, 나중에 지정할 수 있는 방법
 - 목적 : 메모리 효율적으로 사용하기 위해서, null safe 한 value 를 사용하기 위해서
-- lateinit , var
+- lateinit, var
     - 변수 타입을 지정해줘야함
     - prrimitive 타입은 사용할 수 없음
     - 선언 후, 나중에 초기화 해줘도 됨
-- lazy , val
+- lazy, val
     - 선언과 동시에 초기화를 해야함
     - 호출시점에 초기화가 이루어짐
 
 
-### 5. Data class
+### [5. Data class](https://kotlinlang.org/docs/data-classes.html)
 - Data class : 데이터를 담기 위한 클래스
     - `toString(), hashCodde(), equals(), copy()` 메서드를 자동으로 생성
         - override 하면, 직접 구현한 코드를 사용
@@ -48,7 +48,7 @@
     - 상속이 불가능
 
 
-### 6. Object, Companion object
+### [6. Object, Companion object](https://kotlinlang.org/docs/object-declarations.html)
 - Object : 클래스를 정의함과 동시에 객체를 생성
     - 싱글톤을 쉽게 만들 수 있는 키워드
     - 생성자 사용 불가
