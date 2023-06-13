@@ -6,8 +6,8 @@
 
 
 ### Part 0. 안드로이드 앱 개발 시작에 앞서
-- [Kotlin의 전반적인 특징](https://github.com/damon-911/FastCampus/tree/main/Part0/chapter1)
-- [Android의 전반적인 특징](https://github.com/damon-911/FastCampus/tree/main/Part0/chapter2)
+- [Android의 전반적인 특징](https://github.com/damon-911/FastCampus/tree/main/Part0/android)
+- [Kotlin의 전반적인 특징](https://github.com/damon-911/FastCampus/tree/main/Part0/kotlin)
 
 
 ### Part 1. 안드로이드 기본

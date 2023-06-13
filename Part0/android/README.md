@@ -1,7 +1,7 @@
 # Android의 전반적인 특징
 
 ### 1. Activity Lifecycle
-- 앱의 ***완성도***와 ***안정성***을 높이기 위해 반드시 알아야 함
+- 앱의 **완성도**와 **안정성**을 높이기 위해 반드시 알아야 함
     - 다른 앱으로 전환 시, 비정상 종료 되는 문제
     - 사용자가 앱을 사용하지 않는데, 시스템 리소스가 소비되는 문제
     - 사용자가 앱을 나갔다가 돌아왔을 때, 진행상태가 저장되지 않는 문제
@@ -41,12 +41,11 @@
 ![Untitled](https://user-images.githubusercontent.com/24618293/204137047-50113f27-3a2d-41c4-9eb9-fd6a8809ecdc.png)
 
 
-### [2. How Android Draws View](https://developer.android.com/guide/topics/ui/how-android-draws)
+### [2. View 그리기](https://developer.android.com/guide/topics/ui/how-android-draws)
 
 ![Untitled](https://user-images.githubusercontent.com/24618293/204136897-70a64a1d-54e5-4fd1-bef5-251492733a80.png)
 
-- 전위순회 방식을 쓰기 때문에, 부모 부터 자식 뷰 순서로 그려지게 됨
-
+- 전위순회 방식을 쓰기 때문에, 부모 뷰부터 자식 뷰 순서로 그려지게 됨
 - measure
     - 뷰의 크기를 계산
     - 모든 뷰는 각각 자신의 width, height 를 계산
