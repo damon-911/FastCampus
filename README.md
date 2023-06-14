@@ -17,8 +17,8 @@
 - [계산기 앱](https://github.com/damon-911/FastCampus/tree/main/Part1/chapter5)
 - [스톱워치 앱](https://github.com/damon-911/FastCampus/tree/main/Part1/chapter6)
 - [단어장 앱](https://github.com/damon-911/FastCampus/tree/main/Part1/chapter7)
-- 나만의 액자 앱
-- 음악재생 앱
+- [나만의 액자 앱](https://github.com/damon-911/FastCampus/tree/main/Part1/chapter8)
+- [음악재생 앱](https://github.com/damon-911/FastCampus/tree/main/Part1/chapter9)
 
 <!--
 ### Part 2. 개발의 퀄리티를 높이는 라이브러리의 활용
