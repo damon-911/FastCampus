@@ -1,4 +1,4 @@
-# Kotlin의 전반적인 특징
+# Kotlin의 이해
 
 ### [1. Lambda (람다)](http://developer.android.com/codelabs/basic-android-kotlin-compose-function-types-and-lambda)
 

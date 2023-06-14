@@ -1,4 +1,4 @@
-# Android의 전반적인 특징
+# Android의 이해
 
 ### [1. Activity 생명주기](https://developer.android.com/guide/components/activities/activity-lifecycle)
 - 앱의 **완성도**와 **안정성**을 높이기 위해 반드시 알아야 함
