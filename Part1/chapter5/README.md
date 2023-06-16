@@ -10,7 +10,8 @@
 
 ### 사용 기술
 - UI
-    - ConstraintLayout - Flow
+    - ConstraintLayout
+        - Flow
     - style
     - color (Light/Dark)
     - theme
