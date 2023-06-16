@@ -45,7 +45,7 @@
 
 ![Untitled](https://user-images.githubusercontent.com/24618293/204136897-70a64a1d-54e5-4fd1-bef5-251492733a80.png)
 
-- 전위순회 방식을 쓰기 때문에, 부모 뷰부터 자식 뷰 순서로 그려지게 됨
+- 전위순회 방식을 쓰기 때문에 부모 뷰부터 자식 뷰 순서로 그려지게 됨
 - measure
     - 뷰의 크기를 계산
     - 모든 뷰는 각각 자신의 width, height 를 계산

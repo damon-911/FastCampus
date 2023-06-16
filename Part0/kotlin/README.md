@@ -16,7 +16,7 @@
 - 수신 객체 지정 람다 (lambda with receiver) : 수신 객체를 명시하지 않고, 람다의 본문 안에서 해당 객체의 메서드를 호출할 수 있게 하는 것
 - 차이점
     - 수신 객체 접근 방법 : this, it
-    - Return 값 : 수신객체, 마지막 행 (lambda result)
+    - 리턴 값 : 수신객체, 람다 식의 마지막 행 (lambda result)
 
 ![Untitled](https://user-images.githubusercontent.com/24618293/201356804-93c1fdeb-81ee-4316-9096-e33d998885bf.png)
 
