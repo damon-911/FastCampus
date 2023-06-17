@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">chapter1</string>
+    <string name="backToHistory">마지막 시점 돌아가기</string>
+    <string name="changeTabName">탭 이름 바꾸기</string>
+    <string name="save">저장</string>
+    <string name="cancel">취소</string>
+    <string name="backToHistory_errorMessage">마지막 저장 시점이 없습니다.</string>
 </resources>
