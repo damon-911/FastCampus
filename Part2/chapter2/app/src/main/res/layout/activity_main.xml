@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,12 +8,57 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tv_timer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="00:00.00"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/waveFormView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <fastcampus.part2.chapter2.WaveformView
+        android:id="@+id/waveFormView"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:background="#E4E4E4"
+        app:layout_constraintBottom_toTopOf="@+id/btn_record"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btn_play"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="100dp"
+        android:src="@drawable/ic_baseline_play_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_record"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="@color/green" />
+
+    <ImageView
+        android:id="@+id/btn_record"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="100dp"
+        android:src="@drawable/ic_baseline_record_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="@color/red" />
+
+    <ImageView
+        android:id="@+id/btn_stop"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="100dp"
+        android:src="@drawable/ic_baseline_stop_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_record"
+        app:tint="@color/blue" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
