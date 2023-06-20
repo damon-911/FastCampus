@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity(), Timer.OnTimerTickListener {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-Log.d("qwer", "\"${externalCacheDir?.absolutePath}/audiorecordtest.3gp\"")
+
         fileName = "${externalCacheDir?.absolutePath}/audiorecordtest.3gp"
         timer = Timer(this)
 
