@@ -24,6 +24,7 @@
 ### Part 2. 개발의 퀄리티를 높이는 라이브러리의 활용
 - [웹툰 앱](https://github.com/damon-911/FastCampus/tree/main/Part2/chapter1)
 - [녹음기 앱](https://github.com/damon-911/FastCampus/tree/main/Part2/chapter2)
+- [오늘의 공지 앱](https://github.com/damon-911/FastCampus/tree/main/Part2/chapter3)
 
 
 <!--
