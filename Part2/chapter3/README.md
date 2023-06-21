@@ -16,7 +16,8 @@
     - 효율적으로 HTTP 통신을 할 수 있도록 도와주는 라이브러리
     - 안드로이드 내부의 URL 클래스의 http 처리도 OkHttp 를 이용해서 구현이 되어 있음
 - [HTTP/HTTPS](https://developer.android.com/training/articles/security-ssl)
-    - HTML 문서를 주고받기위한 통신 규약 (Hyper Text Transfer Protocol (Secure))
+    - Hyper Text Transfer Protocol (Secure)
+    - HTML 문서를 주고받기위한 통신 규약 
     - 단방향 통신, 클라이언트의 요청, 서버의 응답, 응답 이후는 연결을 끊음
     - 요청 시 -> Request Line / Header / Body 의 구성을 가짐
         - Request Line : 메서드 (GET / POST), 버전, URL, 등의 정보
