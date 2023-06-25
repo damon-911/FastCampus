@@ -133,3 +133,4 @@ fabric.properties
 !/gradle/wrapper/gradle-wrapper.jar
 
 # User defined
+app/src/main/java/fastcampus/part2/chapter4/network/APIToken.kt

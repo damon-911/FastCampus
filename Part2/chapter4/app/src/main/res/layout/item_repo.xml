@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tv_repoName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Repository Name" />
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_repoName"
+        tools:text="This is description" />
+
+    <ImageView
+        android:id="@+id/iv_starCount"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_baseline_star_outline_24"
+        app:layout_constraintBottom_toBottomOf="@id/tv_starCount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_starCount" />
+
+    <TextView
+        android:id="@+id/tv_starCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@id/iv_starCount"
+        app:layout_constraintTop_toBottomOf="@id/tv_description"
+        tools:text="300" />
+
+    <ImageView
+        android:id="@+id/iv_forkCount"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/ic_baseline_fork_right_24"
+        app:layout_constraintBottom_toBottomOf="@id/tv_forkCount"
+        app:layout_constraintStart_toEndOf="@id/tv_starCount"
+        app:layout_constraintTop_toTopOf="@id/tv_forkCount" />
+
+    <TextView
+        android:id="@+id/tv_forkCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@id/iv_forkCount"
+        app:layout_constraintTop_toBottomOf="@id/tv_description"
+        tools:text="300" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
