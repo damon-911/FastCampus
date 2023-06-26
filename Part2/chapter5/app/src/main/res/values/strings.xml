@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">뉴스 앱</string>
+    <string name="sport">스포츠</string>
+    <string name="it">정보기술</string>
+    <string name="society">사회</string>
+    <string name="economy">경제</string>
+    <string name="politics">정치</string>
+    <string name="feed">피드</string>
+</resources>
