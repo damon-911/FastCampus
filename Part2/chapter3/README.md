@@ -1,12 +1,5 @@
 # 오늘의 공지 앱
 
-### 구현 기능
-- ServerSocket 으로 간단 Socket 서버 구현
-- Socket 통신으로 Client 에서 데이터 송신
-- OkHttp 를 통해 데이터 가져오기
-- GSON 을 통해 JSON 형식 데이터 가져오기
-
-
 ### 사용 기술
 - [Socket](https://developer.android.com/reference/java/net/Socket)
     - 네트워크 상에서 데이터를 통신할 수 있도록 연결해주는 End-point

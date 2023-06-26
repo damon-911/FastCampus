@@ -1,11 +1,5 @@
 # 뉴스 앱
 
-### 구현 기능
-- Retrofit 을 이용해 서버 데이터 불러오기
-- Material Design 을 통해 UI 만들기
-- Glide 와 Lottie 를 통해 이미지와 애니메이션 가져오기
-
-
 ### 사용 기술
 - [Tikxml](https://github.com/Tickaroo/tikxml)
     - Retrofit 과 함께 사용할 수 있는 XML Parser
