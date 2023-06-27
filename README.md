@@ -27,6 +27,7 @@
 - [오늘의 공지 앱](https://github.com/damon-911/FastCampus/tree/main/Part2/chapter3)
 - [깃헙 레포지토리 조회 앱](https://github.com/damon-911/FastCampus/tree/main/Part2/chapter4)
 - [뉴스 앱](https://github.com/damon-911/FastCampus/tree/main/Part2/chapter5)
+- [채팅 앱](https://github.com/damon-911/FastCampus/tree/main/Part2/chapter6)
 
 
 <!--
