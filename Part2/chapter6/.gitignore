@@ -133,3 +133,4 @@ fabric.properties
 !/gradle/wrapper/gradle-wrapper.jar
 
 # User defined
+app/google-services.json
