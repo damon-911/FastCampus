@@ -45,7 +45,6 @@ class ChatListFragment : Fragment(R.layout.fragment_chatlist) {
                     val chatRoomList = snapshot.children.map {
                         it.getValue(ChatRoomItem::class.java)
                     }
-
                     chatListAdapter.submitList(chatRoomList)
                 }
 

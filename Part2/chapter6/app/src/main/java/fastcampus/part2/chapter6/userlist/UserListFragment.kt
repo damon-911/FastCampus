@@ -44,7 +44,7 @@ class UserListFragment : Fragment(R.layout.fragment_userlist) {
                     val newChatRoom = ChatRoomItem(
                         chatRoomId = chatRoomId,
                         otherUserName = otherUser.username,
-                        otherUserId = otherUser.userId,
+                        otherUserId = otherUser.userId
                     )
                     chatRoomDB.setValue(newChatRoom)
                 }
@@ -52,7 +52,6 @@ class UserListFragment : Fragment(R.layout.fragment_userlist) {
                 val intent = Intent(context, ChatActivity::class.java)
                 intent.putExtra(ChatActivity.EXTRA_OTHER_USER_ID, otherUser.userId)
                 intent.putExtra(ChatActivity.EXTRA_CHAT_ROOM_ID, chatRoomId)
-
                 startActivity(intent)
             }
         }

@@ -8,7 +8,6 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.messaging.ktx.messaging
-import fastcampus.part2.chapter6.key.Key.Companion.DB_URL
 import fastcampus.part2.chapter6.key.Key.Companion.DB_USERS
 import fastcampus.part2.chapter6.databinding.ActivityLoginBinding
 
@@ -67,7 +66,7 @@ class LoginActivity : AppCompatActivity() {
                             user["username"] = email
                             user["fcmToken"] = token
 
-                            Firebase.database(DB_URL).reference.child(DB_USERS).child(userId)
+                            Firebase.database(getString(R.string.DB_URL)).reference.child(DB_USERS).child(userId)
                                 .updateChildren(user)
 
                             val intent = Intent(this, MainActivity::class.java)

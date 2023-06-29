@@ -1,6 +1,7 @@
 package fastcampus.part2.chapter6
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -15,6 +16,11 @@ import fastcampus.part2.chapter6.chatdetail.ChatItem
 import fastcampus.part2.chapter6.key.Key
 import fastcampus.part2.chapter6.databinding.ActivityChatBinding
 import fastcampus.part2.chapter6.userlist.UserItem
+import okhttp3.*
+import okhttp3.MediaType.Companion.toMediaType
+import okhttp3.RequestBody.Companion.toRequestBody
+import org.json.JSONObject
+import java.io.IOException
 
 class ChatActivity : AppCompatActivity() {
 
@@ -47,6 +53,7 @@ class ChatActivity : AppCompatActivity() {
 
         chatRoomId = intent.getStringExtra(EXTRA_CHAT_ROOM_ID) ?: return
         otherUserId = intent.getStringExtra(EXTRA_OTHER_USER_ID) ?: return
+
         myUserId = Firebase.auth.currentUser?.uid ?: ""
 
         Firebase.database.reference.child(Key.DB_USERS).child(myUserId).get()
@@ -74,7 +81,61 @@ class ChatActivity : AppCompatActivity() {
         })
 
         binding.btnSend.setOnClickListener {
-            // 메세지 전송
+            val message = binding.etMessage.text.toString()
+
+            if (!isInit) {
+                return@setOnClickListener
+            }
+
+            if (message.isEmpty()) {
+                Toast.makeText(applicationContext, "빈 메시지를 전송할 수 없습니다.", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            val newChatItem = ChatItem(
+                message = message,
+                userId = myUserId
+            )
+
+            Firebase.database.reference.child(Key.DB_CHATS).child(chatRoomId).push().apply {
+                newChatItem.chatId = key
+                setValue(newChatItem)
+            }
+
+            val updates: MutableMap<String, Any> = hashMapOf(
+                "${Key.DB_CHAT_ROOMS}/$myUserId/$otherUserId/lastMessage" to message,
+                "${Key.DB_CHAT_ROOMS}/$otherUserId/$myUserId/lastMessage" to message,
+                "${Key.DB_CHAT_ROOMS}/$otherUserId/$myUserId/chatRoomId" to chatRoomId,
+                "${Key.DB_CHAT_ROOMS}/$otherUserId/$myUserId/otherUserId" to myUserId,
+                "${Key.DB_CHAT_ROOMS}/$otherUserId/$myUserId/otherUserName" to myUserName
+            )
+            Firebase.database.reference.updateChildren(updates)
+
+            val notification = JSONObject()
+            notification.put("title", getString(R.string.app_name))
+            notification.put("body", message)
+
+            val root = JSONObject()
+            root.put("to", otherUserFcmToken)
+            root.put("priority", "high")
+            root.put("notification", notification)
+
+            val requestBody = root.toString().toRequestBody("application/json; charset=utf-8".toMediaType())
+            val request = Request.Builder().post(requestBody).url("https://fcm.googleapis.com/fcm/send")
+                .header("Authorization", "key=${getString(R.string.FCM_SERVER_KEY)}").build()
+
+            val client = OkHttpClient()
+            client.newCall(request).enqueue(object : Callback {
+                override fun onFailure(call: Call, e: IOException) {
+                    e.stackTraceToString()
+                }
+
+                override fun onResponse(call: Call, response: Response) {
+                    // ignore onResponse
+                }
+            })
+
+            binding.etMessage.text.clear()
         }
     }
 

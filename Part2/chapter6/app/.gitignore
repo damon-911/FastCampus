@@ -134,3 +134,4 @@ fabric.properties
 
 # User defined
 app/google-services.json
+app/src/main/res/values/secrets.xml

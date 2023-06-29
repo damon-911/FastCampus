@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
             if (isGranted) {
                 // FCM SDK (and your app) can post notifications.
             } else {
-                // 알림권한 없음
+                // 알림 권한 없음
             }
         }
 
@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         val currentUser = Firebase.auth.currentUser
 
         if (currentUser == null) {
-            // 로그인이 안되어있음
+            // 로그인이 되어 있지 않음
             startActivity(Intent(this, LoginActivity::class.java))
             finish()
         }
@@ -106,9 +106,8 @@ class MainActivity : AppCompatActivity() {
     private fun showPermissionRationalDialog() {
         AlertDialog.Builder(this)
             .setMessage("알림 권한이 없으면 알림을 받을 수 없습니다.")
-            .setPositiveButton("권한 허용하기") { _, _ ->
-                requestPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
-            }.setNegativeButton("취소") { dialogInterface, _ -> dialogInterface.cancel() }
+            .setPositiveButton("권한 허용하기") { _, _ -> requestPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS) }
+            .setNegativeButton("취소") { dialogInterface, _ -> dialogInterface.cancel() }
             .show()
     }
 }
