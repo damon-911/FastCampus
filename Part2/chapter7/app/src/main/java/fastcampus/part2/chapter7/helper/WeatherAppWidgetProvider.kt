@@ -1,4 +1,4 @@
-package fastcampus.part2.chapter7.weather
+package fastcampus.part2.chapter7.helper
 
 import android.app.ForegroundServiceStartNotAllowedException
 import android.app.PendingIntent
@@ -19,6 +19,7 @@ class WeatherAppWidgetProvider : AppWidgetProvider() {
         appWidgetIds: IntArray
     ) {
         super.onUpdate(context, appWidgetManager, appWidgetIds)
+
         appWidgetIds.forEach { appWidgetId ->
             val pendingIntent: PendingIntent = Intent(context, UpdateWeatherService::class.java)
                 .let { intent ->
@@ -29,24 +30,27 @@ class WeatherAppWidgetProvider : AppWidgetProvider() {
                         PendingIntent.FLAG_IMMUTABLE
                     )
                 }
+
             val views: RemoteViews = RemoteViews(
                 context.packageName,
                 R.layout.widget_weather
             ).apply {
                 setOnClickPendingIntent(R.id.tv_temperature, pendingIntent)
             }
+
             appWidgetManager.updateAppWidget(appWidgetId, views)
         }
+
         val serviceIntent = Intent(context, UpdateWeatherService::class.java)
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
             try {
                 ContextCompat.startForegroundService(context, serviceIntent)
-
             } catch (e: ForegroundServiceStartNotAllowedException) {
                 e.printStackTrace()
             }
-        } else {
+        }
+        else {
             ContextCompat.startForegroundService(context, serviceIntent)
         }
     }

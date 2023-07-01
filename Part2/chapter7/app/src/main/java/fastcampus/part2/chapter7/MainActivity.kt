@@ -3,14 +3,12 @@ package fastcampus.part2.chapter7
 import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.location.Address
 import android.location.Geocoder
 import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.Settings
-import android.util.Log
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
@@ -68,14 +66,16 @@ class MainActivity : AppCompatActivity() {
             Thread {
                 try {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-                        Geocoder(this, Locale.KOREA).getFromLocation(it.latitude, it.longitude, 1
+                        Geocoder(this, Locale.KOREA).getFromLocation(
+                            it.latitude,
+                            it.longitude,
+                            1
                         ) { addressList ->
                             runOnUiThread {
                                 binding.tvLocation.text = addressList[0]?.thoroughfare.orEmpty()
                             }
                         }
-                    }
-                    else {
+                    } else {
                         val addressList = Geocoder(this, Locale.KOREA).getFromLocation(
                             it.latitude,
                             it.longitude,

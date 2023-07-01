@@ -11,7 +11,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import fastcampus.part2.chapter7.databinding.ActivitySettingBinding
-import fastcampus.part2.chapter7.weather.UpdateWeatherService
+import fastcampus.part2.chapter7.helper.UpdateWeatherService
 
 class SettingActivity : AppCompatActivity() {
 

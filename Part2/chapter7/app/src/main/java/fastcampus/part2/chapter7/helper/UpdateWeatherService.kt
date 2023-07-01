@@ -1,4 +1,4 @@
-package fastcampus.part2.chapter7.weather
+package fastcampus.part2.chapter7.helper
 
 import android.Manifest
 import android.app.Notification
@@ -15,10 +15,17 @@ import android.widget.RemoteViews
 import androidx.core.app.ActivityCompat
 import androidx.core.app.NotificationCompat
 import com.google.android.gms.location.LocationServices
+import fastcampus.part2.chapter7.MyApplication
 import fastcampus.part2.chapter7.R
 import fastcampus.part2.chapter7.SettingActivity
+import fastcampus.part2.chapter7.weather.WeatherRepository
 
 class UpdateWeatherService : Service() {
+
+    companion object {
+        val NOTIFICATION_CHANNEL = MyApplication.applicationContext().getString(R.string.NOTIFICATION_CHANNEL)
+    }
+
     override fun onBind(intent: Intent?): IBinder? {
         return null
     }
@@ -34,13 +41,12 @@ class UpdateWeatherService : Service() {
                 Manifest.permission.ACCESS_BACKGROUND_LOCATION
             ) != PackageManager.PERMISSION_GRANTED
         ) {
-
             val pendingIntent: PendingIntent = Intent(this, SettingActivity::class.java).let {
                 PendingIntent.getActivity(this, 2, it, PendingIntent.FLAG_IMMUTABLE)
             }
 
             RemoteViews(packageName, R.layout.widget_weather).apply {
-                setTextViewText(R.id.tv_temperature, "권한없음")
+                setTextViewText(R.id.tv_temperature, "권한 없음")
                 setTextViewText(R.id.tv_weather, "")
                 setOnClickPendingIntent(R.id.tv_temperature, pendingIntent)
             }.also { remoteViews ->
@@ -58,7 +64,6 @@ class UpdateWeatherService : Service() {
                 longitude = it.longitude,
                 latitude = it.latitude,
                 successCallback = { forecastList ->
-
                     val pendingServiceIntent: PendingIntent =
                         Intent(this, UpdateWeatherService::class.java)
                             .let { intent ->
@@ -83,8 +88,7 @@ class UpdateWeatherService : Service() {
                         )
                         setOnClickPendingIntent(R.id.tv_temperature, pendingServiceIntent)
                     }.also { remoteViews ->
-                        val appWidgetName =
-                            ComponentName(this, WeatherAppWidgetProvider::class.java)
+                        val appWidgetName = ComponentName(this, WeatherAppWidgetProvider::class.java)
                         appWidgetManager.updateAppWidget(appWidgetName, remoteViews)
                     }
 
@@ -104,14 +108,8 @@ class UpdateWeatherService : Service() {
                             }
 
                     RemoteViews(packageName, R.layout.widget_weather).apply {
-                        setTextViewText(
-                            R.id.tv_temperature,
-                            "에러"
-                        )
-                        setTextViewText(
-                            R.id.tv_weather,
-                            ""
-                        )
+                        setTextViewText(R.id.tv_temperature, "에러")
+                        setTextViewText(R.id.tv_weather, "")
                         setOnClickPendingIntent(R.id.tv_temperature, pendingServiceIntent)
                     }.also { remoteViews ->
                         val appWidgetName =
@@ -130,7 +128,7 @@ class UpdateWeatherService : Service() {
     private fun createChannel() {
         val channel = NotificationChannel(
             NOTIFICATION_CHANNEL,
-            "날씨앱",
+            "날씨 앱",
             NotificationManager.IMPORTANCE_LOW
         )
 
@@ -143,19 +141,13 @@ class UpdateWeatherService : Service() {
     private fun createNotification(): Notification {
         return NotificationCompat.Builder(this, NOTIFICATION_CHANNEL)
             .setSmallIcon(R.drawable.ic_launcher_background)
-            .setContentTitle("날씨앱")
+            .setContentTitle("날씨 앱")
             .setContentText("날씨 업데이트")
             .build()
-
     }
 
     override fun onDestroy() {
         super.onDestroy()
-
         stopForeground(STOP_FOREGROUND_REMOVE)
-    }
-
-    companion object {
-        const val NOTIFICATION_CHANNEL = "widget_refresh_channel"
     }
 }

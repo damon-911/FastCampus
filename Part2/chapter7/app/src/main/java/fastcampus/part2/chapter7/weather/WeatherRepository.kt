@@ -1,7 +1,6 @@
 package fastcampus.part2.chapter7.weather
 
-import android.content.Context
-import com.google.gson.GsonBuilder
+import fastcampus.part2.chapter7.MyApplication
 import fastcampus.part2.chapter7.R
 import fastcampus.part2.chapter7.helper.BaseDateTime
 import fastcampus.part2.chapter7.helper.GeoPointConverter
@@ -30,8 +29,9 @@ object WeatherRepository {
         val baseDateTime = BaseDateTime.getBaseDateTime()
         val converter = GeoPointConverter()
         val point = converter.convert(lat = latitude, lon = longitude)
+
         service.getVillageForecast(
-            serviceKey = "SERVICE_KEY",
+            serviceKey = MyApplication.applicationContext().getString(R.string.SERVICE_KEY),
             baseDate = baseDateTime.baseDate,
             baseTime = baseDateTime.baseTime,
             nx = point.nx,
