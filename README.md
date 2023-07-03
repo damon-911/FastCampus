@@ -30,6 +30,7 @@
 - [채팅 앱](https://github.com/damon-911/FastCampus/tree/main/Part2/chapter6)
 - [날씨 앱](https://github.com/damon-911/FastCampus/tree/main/Part2/chapter7)
 - [대동맛집도](https://github.com/damon-911/FastCampus/tree/main/Part2/chapter8)
+- [위치공유 앱](https://github.com/damon-911/FastCampus/tree/main/Part2/chapter9)
 
 
 <!--
