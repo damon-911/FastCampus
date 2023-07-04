@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapActivity">
+
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/centerLottieAnimationView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:alpha="1"
+        android:scaleX="0"
+        android:scaleY="0"
+        app:lottie_rawRes="@raw/emoji_star" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_currentLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:src="@drawable/ic_baseline_my_location_24"
+        app:layout_anchor="@id/emojiBottomSheetLayout"
+        app:layout_anchorGravity="center|top" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/emojiBottomSheetLayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/black"
+        app:behavior_hideable="true"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/dummyLottieAnimationView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_rawRes="@raw/emoji_star" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/emojiLottieAnimationView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_rawRes="@raw/emoji_star" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

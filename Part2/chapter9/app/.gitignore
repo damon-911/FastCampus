@@ -133,4 +133,5 @@ fabric.properties
 !/gradle/wrapper/gradle-wrapper.jar
 
 # User defined
+app/google-services.json
 app/src/main/res/values/secrets.xml
