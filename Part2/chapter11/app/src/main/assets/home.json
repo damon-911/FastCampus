@@ -1,0 +1,12 @@
+{
+  "user": {
+    "nickname": "술시키신분",
+    "starCount": 9,
+    "totalCount": 12
+  },
+  "appbarImage": "https://picsum.photos/200/100",
+  "banner": {
+    "image": "https://picsum.photos/200/240",
+    "contentDescription": "아메리카노 50% 세일중"
+  }
+}

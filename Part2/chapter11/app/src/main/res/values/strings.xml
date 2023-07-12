@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">별다방커피</string>
+    <string name="home">Home</string>
+    <string name="order">Order</string>
+    <string name="appbar_title_text">%s님,\n오늘도 커피 한잔 어떠세요??</string>
+    <string name="appbar_star_title">%d/%d ★</string>
+    <string name="recommend_title">%s님을 위한 추천 메뉴</string>
+    <string name="food_menu_title">함께하면 좋은 푸드</string>
+    <string name="delivery">DELIVERY</string>
+</resources>
