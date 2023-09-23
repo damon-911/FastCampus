@@ -36,10 +36,10 @@
 - [요튜브](https://github.com/damon-911/FastCampus/tree/main/Part2/chapter12)
 
 
-<!--
 ### Part 3. 복잡한 요구사항
+- [얼굴 인식 서비스](https://github.com/damon-911/FastCampus/tree/main/Part3/chapter1)
 
-
+<!--
 ### Part 4. Jetpack Compose
 
 
