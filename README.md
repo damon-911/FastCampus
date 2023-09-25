@@ -38,6 +38,8 @@
 
 ### Part 3. 복잡한 요구사항
 - [얼굴 인식 서비스](https://github.com/damon-911/FastCampus/tree/main/Part3/chapter1)
+- [금융 서비스](https://github.com/damon-911/FastCampus/tree/main/Part3/chapter2)
+
 
 <!--
 ### Part 4. Jetpack Compose

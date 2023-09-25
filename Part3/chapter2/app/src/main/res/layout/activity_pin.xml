@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="fastcampus.part3.chapter2.PinViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="56dp"
+            android:layout_marginEnd="16dp"
+            android:text="간편 비밀번호 6자리를 입력해주세요."
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:id="@+id/passwordLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleTextView">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                style="@style/Code"
+                android:layout_marginStart="0dp"
+                app:code_index="@{0}"
+                app:code_text="@{viewModel.passwordLiveData}" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                style="@style/Code"
+                app:code_index="@{1}"
+                app:code_text="@{viewModel.passwordLiveData}" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                style="@style/Code"
+                app:code_index="@{2}"
+                app:code_text="@{viewModel.passwordLiveData}" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                style="@style/Code"
+                app:code_index="@{3}"
+                app:code_text="@{viewModel.passwordLiveData}" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                style="@style/Code"
+                app:code_index="@{4}"
+                app:code_text="@{viewModel.passwordLiveData}" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                style="@style/Code"
+                app:code_index="@{5}"
+                app:code_text="@{viewModel.passwordLiveData}" />
+
+        </LinearLayout>
+
+        <fastcampus.part3.chapter2.widget.ShuffleNumberKeyboard
+            android:id="@+id/shuffleKeyboard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
