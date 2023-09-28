@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="card_width">250dp</dimen>
+    <dimen name="card_height">150dp</dimen>
+
+    <dimen name="elevation_back">1dp</dimen>
+    <dimen name="elevation_front">4dp</dimen>
+
+    <dimen name="translation_move_x">120dp</dimen>
+    <dimen name="translation_move_y">-200dp</dimen>
+</resources>

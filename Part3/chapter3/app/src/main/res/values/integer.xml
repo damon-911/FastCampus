@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="rotation_top">7</integer>
+    <integer name="rotation_bottom">-7</integer>
+    <integer name="rotation_move">45</integer>
+
+    <integer name="duration_move">600</integer>
+</resources>
