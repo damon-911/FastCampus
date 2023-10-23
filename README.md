@@ -40,6 +40,7 @@
 - [얼굴 인식 서비스](https://github.com/damon-911/FastCampus/tree/main/Part3/chapter1)
 - [금융 서비스](https://github.com/damon-911/FastCampus/tree/main/Part3/chapter2)
 - [월렛 서비스](https://github.com/damon-911/FastCampus/tree/main/Part3/chapter3)
+- [이미지 추출 앱](https://github.com/damon-911/FastCampus/tree/main/Part3/chapter4)
 
 
 <!--
