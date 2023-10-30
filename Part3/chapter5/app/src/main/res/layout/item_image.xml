@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="item"
+            type="fastcampus.part3.chapter5.model.ImageItem" />
+
+        <variable
+            name="handler"
+            type="fastcampus.part3.chapter5.list.ItemHandler" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/thumbnailImageView"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:scaleType="centerCrop"
+            app:image="@{item.thumbnailUrl}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/dateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:date="@{item.dateTime}"
+            app:layout_constraintStart_toEndOf="@+id/thumbnailImageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/collectionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@{item.collection}"
+            app:layout_constraintStart_toStartOf="@+id/dateTextView"
+            app:layout_constraintTop_toBottomOf="@+id/dateTextView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/siteNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@{item.siteName}"
+            app:layout_constraintStart_toStartOf="@+id/collectionTextView"
+            app:layout_constraintTop_toBottomOf="@+id/collectionTextView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/urlTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@{item.docUrl}"
+            app:layout_constraintStart_toStartOf="@+id/siteNameTextView"
+            app:layout_constraintTop_toBottomOf="@+id/siteNameTextView" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/favoriteImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> handler.onClickFavorite(item)}"
+            app:favorite="@{item.favorite}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
