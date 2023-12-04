@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextAppearance.App" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/black</item>
+        <item name="hintTextColor">#CCCCCC</item>
+        <item name="android:textSize">@dimen/text_medium</item>
+    </style>
+
+    <style name="TextAppearance.App.Large" parent="TextAppearance.App">
+        <item name="android:textSize">@dimen/text_large</item>
+    </style>
+
+    <style name="TextAppearance.App.Small" parent="TextAppearance.App">
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+    <style name="TextAppearance.App.Large.Bold" parent="TextAppearance.App.Large">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.App.Small.Bold" parent="TextAppearance.App.Small">
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="fastcampus.part3.chapter7.model.ContentEntity" />
+
+        <variable
+            name="handler"
+            type="fastcampus.part3.chapter7.MainActivity.Handler" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{() -> handler.onClickItem(item)}"
+        android:onLongClick="@{() -> handler.onLongClickItem(item)}"
+        android:paddingStart="@dimen/padding"
+        android:paddingTop="@dimen/padding_small"
+        android:paddingEnd="@dimen/padding"
+        android:paddingBottom="@dimen/padding_small">
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/contentCheckBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:checked="@{item.done}"
+            android:onCheckedChanged="@{(button, bool) -> handler.onCheckedItem(item)}"
+            android:text="@{item.content}"
+            android:textAppearance="@style/TextAppearance.App.Large.Bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="content" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/memoTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_small"
+            android:drawableStart="@drawable/ic_baseline_comment_24"
+            android:drawablePadding="@dimen/padding_small"
+            android:hint="없음"
+            android:text="@{item.memo}"
+            android:textAppearance="@style/TextAppearance.App.Small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contentCheckBox"
+            tools:text="memo" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

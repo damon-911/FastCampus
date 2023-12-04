@@ -43,6 +43,7 @@
 - [이미지 추출 앱](https://github.com/damon-911/FastCampus/tree/main/Part3/chapter4)
 - [미디어 검색 앱](https://github.com/damon-911/FastCampus/tree/main/Part3/chapter5)
 - [쇼핑몰 앱](https://github.com/damon-911/FastCampus/tree/main/Part3/chapter6)
+- [Todo 앱](https://github.com/damon-911/FastCampus/tree/main/Part3/chapter7)
 
 <!--
 ### Part 4. Jetpack Compose
