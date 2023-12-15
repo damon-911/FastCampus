@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="fastcampus.part3.chapter8.domain.model.Content" />
+
+        <variable
+            name="handler"
+            type="fastcampus.part3.chapter8.presenter.ui.MainActivity.Handler" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{() -> handler.onClickItem(item)}"
+        android:onLongClick="@{() -> handler.onLongClickItem(item)}">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/titleTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin"
+            android:text="@{item.title}"
+            android:textAppearance="@style/TextAppearance.App.Large.Bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/contentTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginTop="@dimen/padding_small"
+            android:layout_marginEnd="@dimen/margin"
+            android:text="@{item.content}"
+            android:textAppearance="@style/TextAppearance.App.Small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleTextView"
+            tools:text="content" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/categoryTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin"
+            android:text="@{item.category}"
+            android:textAppearance="@style/TextAppearance.App.Small.Bold"
+            android:textColor="@android:color/holo_red_light"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contentTextView"
+            tools:text="category" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/margin"
+            android:background="#CCCCCC"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/categoryTextView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/likeCountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginTop="@dimen/padding_small"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:drawableStart="@drawable/ic_baseline_favorite_24"
+            android:drawablePadding="@dimen/padding_small"
+            android:gravity="center_vertical"
+            android:text="@{Integer.toString(item.likeCount)}"
+            android:textAppearance="@style/TextAppearance.App.Small"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider"
+            tools:text="1" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/commentCountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin"
+            android:drawableStart="@drawable/ic_baseline_comment_24"
+            android:drawablePadding="@dimen/padding_small"
+            android:gravity="center_vertical"
+            android:text="@{Integer.toString(item.commentCount)}"
+            android:textAppearance="@style/TextAppearance.App.Small"
+            app:layout_constraintBottom_toBottomOf="@+id/likeCountTextView"
+            app:layout_constraintStart_toEndOf="@+id/likeCountTextView"
+            app:layout_constraintTop_toTopOf="@+id/likeCountTextView"
+            tools:text="1" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/viewCountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin"
+            android:drawableStart="@drawable/ic_baseline_eye_24"
+            android:drawablePadding="@dimen/padding_small"
+            android:gravity="center_vertical"
+            android:text="@{Integer.toString(item.viewCount)}"
+            android:textAppearance="@style/TextAppearance.App.Small"
+            app:layout_constraintBottom_toBottomOf="@+id/likeCountTextView"
+            app:layout_constraintStart_toEndOf="@+id/commentCountTextView"
+            app:layout_constraintTop_toTopOf="@+id/likeCountTextView"
+            tools:text="1" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/dateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin"
+            android:textAppearance="@style/TextAppearance.App.Small"
+            android:textColor="#CCCCCC"
+            app:date="@{item.createdDate}"
+            app:layout_constraintBottom_toBottomOf="@+id/likeCountTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/likeCountTextView"
+            tools:text="2023.12.01" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

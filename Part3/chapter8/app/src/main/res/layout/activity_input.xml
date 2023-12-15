@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="fastcampus.part3.chapter8.presenter.viewmodel.InputViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/padding">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/categoryTextLayoutInput"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/categoryEdit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="카테고리"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:text="@={viewModel.category}"
+                android:textAppearance="@style/TextAppearance.App">
+
+                <requestFocus />
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/titleTextLayoutInput"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/categoryTextLayoutInput">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/titleEdit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="제목"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:text="@={viewModel.title}"
+                android:textAppearance="@style/TextAppearance.App" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/contentTextLayoutInput"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleTextLayoutInput">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/contentEdit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="top"
+                android:hint="내용"
+                android:imeOptions="actionDone"
+                android:inputType="textMultiLine"
+                android:minHeight="150dp"
+                android:text="@={viewModel.content}"
+                android:textAppearance="@style/TextAppearance.App" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/confirmButton"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> viewModel.insertData()}"
+            android:paddingStart="@dimen/padding"
+            android:paddingTop="@dimen/padding_small"
+            android:paddingEnd="@dimen/padding"
+            android:paddingBottom="@dimen/padding_small"
+            android:text="입력 완료"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
