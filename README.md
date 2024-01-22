@@ -45,8 +45,3 @@
 - [쇼핑몰 앱](https://github.com/damon-911/FastCampus/tree/main/Part3/chapter6)
 - [Todo 앱](https://github.com/damon-911/FastCampus/tree/main/Part3/chapter7)
 - [Blind 앱](https://github.com/damon-911/FastCampus/tree/main/Part3/chapter8)
-
-### Part 4. Jetpack Compose
-
-### Part 5. 개발부터 배포까지
-- [My Shopping Mall](https://github.com/damon-911/FastCampus/tree/main/Part5/MyShoppingMall)
