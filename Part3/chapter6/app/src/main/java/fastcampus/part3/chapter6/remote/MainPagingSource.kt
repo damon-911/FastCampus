@@ -13,7 +13,7 @@ class MainPagingSource(private val mainService: MainService) : PagingSource<Int,
             val size = params.loadSize
             val result = SampleMock.mockChapter6List() // mainService.getList(page, size).data
             LoadResult.Page(
-                data = result,
+                data = result, // result.list
                 prevKey = null,
                 nextKey = null // result.page.nextPage
             )

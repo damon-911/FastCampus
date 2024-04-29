@@ -21,6 +21,7 @@ import java.util.*
 @RunWith(MockitoJUnitRunner::class)
 class SearchViewModelTest {
 
+    // 백그라운드 작업들을 같은 스레드에서 실행하여 테스트 결과를 동기적으로 실행되게 해줌
     @Rule
     @JvmField
     var rule = InstantTaskExecutorRule()
