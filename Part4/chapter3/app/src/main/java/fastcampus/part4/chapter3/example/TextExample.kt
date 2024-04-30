@@ -10,8 +10,10 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import fastcampus.part4.chapter3.ui.theme.Chapter3Theme
 
 @Composable
 fun TextExample(name: String) {
@@ -91,5 +93,13 @@ fun TextExample(name: String) {
             textDecoration = TextDecoration.Underline,
             textAlign = TextAlign.Center
         )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun TextExamplePreview() {
+    Chapter3Theme {
+        TextExample("Android")
     }
 }
