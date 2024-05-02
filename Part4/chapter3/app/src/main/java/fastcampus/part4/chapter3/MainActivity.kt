@@ -9,6 +9,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import fastcampus.part4.chapter3.example.ButtonExample
+import fastcampus.part4.chapter3.example.ModifierExample
 import fastcampus.part4.chapter3.example.TextExample
 import fastcampus.part4.chapter3.ui.theme.Chapter3Theme
 
@@ -29,6 +30,9 @@ class MainActivity : ComponentActivity() {
                     ButtonExample(onButtonClicked = {
                         Toast.makeText(this, "Button Clicked!", Toast.LENGTH_SHORT).show()
                     })
+
+                    // Modifier
+                    ModifierExample()
                 }
             }
         }
