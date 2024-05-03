@@ -10,6 +10,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import fastcampus.part4.chapter3.example.ButtonExample
 import fastcampus.part4.chapter3.example.ModifierExample
+import fastcampus.part4.chapter3.example.SurfaceExample
 import fastcampus.part4.chapter3.example.TextExample
 import fastcampus.part4.chapter3.ui.theme.Chapter3Theme
 
@@ -33,6 +34,9 @@ class MainActivity : ComponentActivity() {
 
                     // Modifier
                     ModifierExample()
+
+                    // Surface
+                    SurfaceExample("Android")
                 }
             }
         }
