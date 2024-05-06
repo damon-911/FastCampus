@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
+import fastcampus.part4.chapter3.example.BoxExample
 import fastcampus.part4.chapter3.example.ButtonExample
 import fastcampus.part4.chapter3.example.ModifierExample
 import fastcampus.part4.chapter3.example.SurfaceExample
@@ -24,6 +25,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
+                    /*
                     // Text
                     TextExample("Android")
 
@@ -37,6 +39,10 @@ class MainActivity : ComponentActivity() {
 
                     // Surface
                     SurfaceExample("Android")
+                    */
+
+                    // Box
+                    BoxExample()
                 }
             }
         }
