@@ -12,6 +12,7 @@ import fastcampus.part4.chapter3.example.BoxExample
 import fastcampus.part4.chapter3.example.BoxWithConstraintsExample
 import fastcampus.part4.chapter3.example.ButtonExample
 import fastcampus.part4.chapter3.example.ModifierExample
+import fastcampus.part4.chapter3.example.RowExample
 import fastcampus.part4.chapter3.example.SurfaceExample
 import fastcampus.part4.chapter3.example.TextExample
 import fastcampus.part4.chapter3.ui.theme.Chapter3Theme
@@ -43,10 +44,12 @@ class MainActivity : ComponentActivity() {
 
                     // Box
                     BoxExample()
-                     */
 
                     // BoxWithConstraints
                     BoxWithConstraintsExample()
+                     */
+                    // Row
+                    RowExample()
                 }
             }
         }
