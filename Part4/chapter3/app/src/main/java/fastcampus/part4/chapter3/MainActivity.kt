@@ -16,6 +16,7 @@ import fastcampus.part4.chapter3.example.ModifierExample
 import fastcampus.part4.chapter3.example.RowExample
 import fastcampus.part4.chapter3.example.SurfaceExample
 import fastcampus.part4.chapter3.example.TextExample
+import fastcampus.part4.chapter3.example.TextFieldExample
 import fastcampus.part4.chapter3.ui.theme.Chapter3Theme
 
 class MainActivity : ComponentActivity() {
@@ -51,9 +52,12 @@ class MainActivity : ComponentActivity() {
 
                     // Row
                     RowExample()
-                     */
+
                     // Column
                     ColumnExample()
+                     */
+                    // TextField
+                    TextFieldExample()
                 }
             }
         }
