@@ -11,6 +11,7 @@ import androidx.compose.ui.Modifier
 import fastcampus.part4.chapter3.example.BoxExample
 import fastcampus.part4.chapter3.example.BoxWithConstraintsExample
 import fastcampus.part4.chapter3.example.ButtonExample
+import fastcampus.part4.chapter3.example.CheckBoxExample
 import fastcampus.part4.chapter3.example.ColumnExample
 import fastcampus.part4.chapter3.example.ModifierExample
 import fastcampus.part4.chapter3.example.RowExample
@@ -55,9 +56,12 @@ class MainActivity : ComponentActivity() {
 
                     // Column
                     ColumnExample()
-                     */
+
                     // TextField
                     TextFieldExample()
+                     */
+                    // CheckBox
+                    CheckBoxExample()
                 }
             }
         }
