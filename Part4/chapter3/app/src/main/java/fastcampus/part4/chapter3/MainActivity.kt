@@ -21,6 +21,7 @@ import fastcampus.part4.chapter3.example.RowExample
 import fastcampus.part4.chapter3.example.SurfaceExample
 import fastcampus.part4.chapter3.example.TextExample
 import fastcampus.part4.chapter3.example.TextFieldExample
+import fastcampus.part4.chapter3.example.TopBarExample
 import fastcampus.part4.chapter3.ui.theme.Chapter3Theme
 
 class MainActivity : ComponentActivity() {
@@ -71,9 +72,12 @@ class MainActivity : ComponentActivity() {
 
                     // Coil
                     CoilExample()
-                     */
+
                     // Card
                     CardExample()
+                     */
+                    // Card
+                    TopBarExample("Android")
                 }
             }
         }
