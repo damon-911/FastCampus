@@ -76,7 +76,7 @@ class MainActivity : ComponentActivity() {
                     // Card
                     CardExample()
                      */
-                    // Card
+                    // TopBar
                     TopBarExample("Android")
                 }
             }
