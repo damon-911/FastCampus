@@ -15,6 +15,6 @@
 - Network Image (Coil)
 - Card
 - TopAppBar
-- Slot
+- Slot API
 - Scaffold
 - Catalog
