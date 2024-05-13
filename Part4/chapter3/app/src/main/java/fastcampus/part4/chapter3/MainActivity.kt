@@ -18,6 +18,7 @@ import fastcampus.part4.chapter3.example.ColumnExample
 import fastcampus.part4.chapter3.example.ImageExample
 import fastcampus.part4.chapter3.example.ModifierExample
 import fastcampus.part4.chapter3.example.RowExample
+import fastcampus.part4.chapter3.example.ScaffoldExample
 import fastcampus.part4.chapter3.example.SlotExample
 import fastcampus.part4.chapter3.example.SurfaceExample
 import fastcampus.part4.chapter3.example.TextExample
@@ -79,9 +80,12 @@ class MainActivity : ComponentActivity() {
 
                     // TopBar
                     TopBarExample("Android")
-                     */
+
                     // Slot
                     SlotExample()
+                     */
+                    // Scaffold
+                    ScaffoldExample()
                 }
             }
         }
