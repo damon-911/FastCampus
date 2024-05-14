@@ -64,15 +64,12 @@ fun CardExample() {
             Spacer(modifier = Modifier.size(16.dp))
 
             // placeholder : 이미지가 없을 때, 대체로 채워 넣을 항목 추가
-            // contentScale : 사이즈에 맞지 않는 부분은 잘라내어 표시
+            // ContentScale.Crop : 사이즈에 맞지 않는 부분은 잘라내어 표시
             // clip(CircleShape) : 둥근 외형으로 설정
             Row(
                 verticalAlignment = Alignment.CenterVertically,
                 modifier = Modifier.padding(8.dp)
             ) {
-                // 스텝 2: `AsyncImage`에는 `placeholder`를 지정하고,
-                // `contentScale`을 `ContentScale.Crop`으로 설정합시다.
-                // `clip(CircleShape)`로 둥근 외양을 만들어 봅시다.
                 AsyncImage(
                     model = cardData.imageUri,
                     placeholder = ColorPainter(placeHolderColor),
