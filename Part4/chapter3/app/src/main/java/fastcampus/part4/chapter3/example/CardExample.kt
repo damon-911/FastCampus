@@ -19,6 +19,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
+import fastcampus.part4.chapter3.data.CardData
 import fastcampus.part4.chapter3.ui.theme.Chapter3Theme
 
 @Composable
@@ -93,13 +94,6 @@ fun CardExample() {
         }
     }
 }
-
-data class CardData(
-    val imageUri: String,
-    val imageDescription: String,
-    val author: String,
-    val description: String
-)
 
 @Preview(showBackground = true)
 @Composable
