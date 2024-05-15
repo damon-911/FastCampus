@@ -3,3 +3,4 @@
 ### 내용
 - ConstraintLayout
 - ConstraintSet
+- Chain & Barrier
