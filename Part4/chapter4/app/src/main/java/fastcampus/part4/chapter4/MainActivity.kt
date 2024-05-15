@@ -8,6 +8,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import fastcampus.part4.chapter4.example.ConstraintLayoutExample
+import fastcampus.part4.chapter4.example.ConstraintSetExample
 import fastcampus.part4.chapter4.ui.theme.Chapter4Theme
 
 class MainActivity : ComponentActivity() {
@@ -20,8 +21,12 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
+                    /*
                     // ConstraintLayout
                     ConstraintLayoutExample()
+                     */
+                    // ConstraintSet
+                    ConstraintSetExample()
                 }
             }
         }
