@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
+import fastcampus.part4.chapter4.example.CardWithConstraintLayoutExample
 import fastcampus.part4.chapter4.example.ChainAndBarrierExample
 import fastcampus.part4.chapter4.example.ConstraintLayoutExample
 import fastcampus.part4.chapter4.example.ConstraintSetExample
@@ -28,9 +29,12 @@ class MainActivity : ComponentActivity() {
 
                     // ConstraintSet
                     ConstraintSetExample()
-                     */
+
                     // Chain & Barrier
                     ChainAndBarrierExample()
+                     */
+                    // Card with ConstraintLayout
+                    CardWithConstraintLayoutExample()
                 }
             }
         }
