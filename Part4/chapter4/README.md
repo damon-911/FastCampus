@@ -7,3 +7,4 @@
 - Card with ConstraintLayout
 - Canvas
 - Dialog
+- Custom Dialog
