@@ -12,6 +12,7 @@ import fastcampus.part4.chapter4.example.CardWithConstraintLayoutExample
 import fastcampus.part4.chapter4.example.ChainAndBarrierExample
 import fastcampus.part4.chapter4.example.ConstraintLayoutExample
 import fastcampus.part4.chapter4.example.ConstraintSetExample
+import fastcampus.part4.chapter4.example.DialogExample
 import fastcampus.part4.chapter4.ui.theme.Chapter4Theme
 
 class MainActivity : ComponentActivity() {
@@ -36,9 +37,12 @@ class MainActivity : ComponentActivity() {
 
                     // Card with ConstraintLayout
                     CardWithConstraintLayoutExample()
-                     */
+
                     // Canvas
                     CanvasExample()
+                     */
+                    // Dialog
+                    DialogExample()
                 }
             }
         }

@@ -6,3 +6,4 @@
 - Chain & Barrier
 - Card with ConstraintLayout
 - Canvas
+- Dialog
