@@ -15,6 +15,7 @@ import fastcampus.part4.chapter4.example.ConstraintSetExample
 import fastcampus.part4.chapter4.example.CustomDialogExample
 import fastcampus.part4.chapter4.example.DialogExample
 import fastcampus.part4.chapter4.example.DropdownMenuExample
+import fastcampus.part4.chapter4.example.SnackbarExample
 import fastcampus.part4.chapter4.ui.theme.Chapter4Theme
 
 class MainActivity : ComponentActivity() {
@@ -48,9 +49,12 @@ class MainActivity : ComponentActivity() {
 
                     // Custom Dialog
                     CustomDialogExample()
-                     */
+
                     // Dropdown Menu
                     DropdownMenuExample()
+                     */
+                    // SnackBar
+                    SnackbarExample()
                 }
             }
         }
