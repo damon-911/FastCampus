@@ -77,14 +77,6 @@ fun BottomAppBarExample() {
             )
         }
     }
-
-    // 단계 2: `bottomBar` 파라미터에 `BottomAppBar`를 넣읍시다.
-    // 내용은 텍스트와 버튼을 넣어 봅시다. 버튼에는 `snackBar`를
-    // 연동해 메시지를 출력합니다.
-
-    // 단계 3: 더하기와 빼기 버튼을 추가로 만들고 `MutableState`
-    // 만듭시다. `Scaffold`의 `content`에 `Text`를 넣어 카운터를 출력하게
-    // 합시다.
 }
 
 @Preview(showBackground = true)
