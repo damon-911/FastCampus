@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
+import fastcampus.part4.chapter4.example.AnimationExample
 import fastcampus.part4.chapter4.example.BottomAppBarExample
 import fastcampus.part4.chapter4.example.CanvasExample
 import fastcampus.part4.chapter4.example.CardWithConstraintLayoutExample
@@ -60,9 +61,12 @@ class MainActivity : ComponentActivity() {
 
                     // BottomAppBar
                     BottomAppBarExample()
-                     */
+
                     // State Hoisting
                     StateHoistingExample()
+                     */
+                    // Animation
+                    AnimationExample()
                 }
             }
         }
