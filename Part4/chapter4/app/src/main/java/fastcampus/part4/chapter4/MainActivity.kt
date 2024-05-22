@@ -17,6 +17,7 @@ import fastcampus.part4.chapter4.example.CustomDialogExample
 import fastcampus.part4.chapter4.example.DialogExample
 import fastcampus.part4.chapter4.example.DropdownMenuExample
 import fastcampus.part4.chapter4.example.SnackbarExample
+import fastcampus.part4.chapter4.example.StateHoistingExample
 import fastcampus.part4.chapter4.ui.theme.Chapter4Theme
 
 class MainActivity : ComponentActivity() {
@@ -56,9 +57,12 @@ class MainActivity : ComponentActivity() {
 
                     // SnackBar
                     SnackbarExample()
-                     */
+
                     // BottomAppBar
                     BottomAppBarExample()
+                     */
+                    // State Hoisting
+                    StateHoistingExample()
                 }
             }
         }
