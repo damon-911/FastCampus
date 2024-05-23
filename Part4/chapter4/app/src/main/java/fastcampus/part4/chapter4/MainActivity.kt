@@ -6,20 +6,9 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import fastcampus.part4.chapter4.example.AnimationExample
-import fastcampus.part4.chapter4.example.BottomAppBarExample
-import fastcampus.part4.chapter4.example.CanvasExample
-import fastcampus.part4.chapter4.example.CardWithConstraintLayoutExample
-import fastcampus.part4.chapter4.example.ChainAndBarrierExample
-import fastcampus.part4.chapter4.example.ConstraintLayoutExample
-import fastcampus.part4.chapter4.example.ConstraintSetExample
-import fastcampus.part4.chapter4.example.CustomDialogExample
-import fastcampus.part4.chapter4.example.DialogExample
-import fastcampus.part4.chapter4.example.DropdownMenuExample
-import fastcampus.part4.chapter4.example.EffectExample
-import fastcampus.part4.chapter4.example.SnackbarExample
-import fastcampus.part4.chapter4.example.StateHoistingExample
+import androidx.compose.ui.tooling.preview.Preview
 import fastcampus.part4.chapter4.ui.theme.Chapter4Theme
 
 class MainActivity : ComponentActivity() {
@@ -68,11 +57,22 @@ class MainActivity : ComponentActivity() {
 
                     // Animation
                     AnimationExample()
-                     */
+
                     // Effect
                     EffectExample()
+                     */
+                    // ToDoApp
+                    ToDoApp()
                 }
             }
+        }
+    }
+
+    @Preview(showBackground = true)
+    @Composable
+    fun ToDoAppPreview() {
+        Chapter4Theme {
+            ToDoApp()
         }
     }
 }
