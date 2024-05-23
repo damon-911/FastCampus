@@ -53,8 +53,8 @@ class MainActivity : ComponentActivity() {
                     // TextField
                     TextFieldExample()
 
-                    // CheckBox
-                    CheckBoxExample()
+                    // Checkbox
+                    CheckboxExample()
 
                     // Image
                     ImageExample()
