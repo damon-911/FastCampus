@@ -13,3 +13,4 @@
 - [BottomAppBar](https://github.com/damon-911/FastCampus/tree/main/Part4/chapter4/app/src/main/java/fastcampus/part4/chapter4/example/BottomAppBarExample.kt)
 - [State Hoisting](https://github.com/damon-911/FastCampus/tree/main/Part4/chapter4/app/src/main/java/fastcampus/part4/chapter4/example/StateHoistingExample.kt)
 - [Animation](https://github.com/damon-911/FastCampus/tree/main/Part4/chapter4/app/src/main/java/fastcampus/part4/chapter4/example/AnimationExample.kt)
+- [Effect](https://github.com/damon-911/FastCampus/tree/main/Part4/chapter4/app/src/main/java/fastcampus/part4/chapter4/example/EffectExample.kt)

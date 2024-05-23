@@ -17,6 +17,7 @@ import fastcampus.part4.chapter4.example.ConstraintSetExample
 import fastcampus.part4.chapter4.example.CustomDialogExample
 import fastcampus.part4.chapter4.example.DialogExample
 import fastcampus.part4.chapter4.example.DropdownMenuExample
+import fastcampus.part4.chapter4.example.EffectExample
 import fastcampus.part4.chapter4.example.SnackbarExample
 import fastcampus.part4.chapter4.example.StateHoistingExample
 import fastcampus.part4.chapter4.ui.theme.Chapter4Theme
@@ -64,9 +65,12 @@ class MainActivity : ComponentActivity() {
 
                     // State Hoisting
                     StateHoistingExample()
-                     */
+
                     // Animation
                     AnimationExample()
+                     */
+                    // Effect
+                    EffectExample()
                 }
             }
         }
