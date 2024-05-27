@@ -49,3 +49,4 @@
 ### Part 4. Jetpack Compose
 - [Compose 컴포넌트](https://github.com/damon-911/FastCampus/tree/main/Part4/chapter3)
 - [Compose 활용](https://github.com/damon-911/FastCampus/tree/main/Part4/chapter4)
+- [Compose 아키텍처](https://github.com/damon-911/FastCampus/tree/main/Part4/chapter5)
