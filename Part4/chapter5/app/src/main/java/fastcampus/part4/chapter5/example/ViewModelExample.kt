@@ -40,7 +40,7 @@ fun ViewModelExample(viewModel: ToDoViewModel = viewModel()) {
                 },
                 onSubmit = viewModel.onSubmit
             )
-            LazyColumn {
+            LazyColumn(modifier = Modifier.padding(16.dp)) {
                 items(
                     items = viewModel.toDoList,
                     key = { it.key }
@@ -96,11 +96,12 @@ fun ToDo(
     var isEditing by remember { mutableStateOf(false) }
     Card(
         modifier = Modifier.padding(4.dp),
-        elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
+        elevation = CardDefaults.cardElevation(
+            defaultElevation = 8.dp
+        )
     ) {
-        Crossfade(
-            targetState = isEditing, label = "",
-        ) {
+        // Crossfade를 통해 isEditing에 따라 다른 UI를 보여줌
+        Crossfade(targetState = isEditing, label = "isEditing") {
             when (it) {
                 false -> {
                     Row(
@@ -111,23 +112,23 @@ fun ToDo(
                             text = toDoData.text,
                             modifier = Modifier.weight(1f)
                         )
-                        Text("완료")
+                        Text(text = "완료")
                         Checkbox(
                             checked = toDoData.done,
                             onCheckedChange = { checked ->
                                 onToggle(toDoData.key, checked)
                             }
                         )
-                        Button(
-                            onClick = { isEditing = true }
-                        ) {
-                            Text("수정")
+                        Button(onClick = {
+                            isEditing = true
+                        }) {
+                            Text(text = "수정")
                         }
-                        Spacer(modifier = Modifier.size(4.dp))
-                        Button(
-                            onClick = { onDelete(toDoData.key) }
-                        ) {
-                            Text("삭제")
+                        Spacer(modifier = Modifier.size(8.dp))
+                        Button(onClick = {
+                            onDelete(toDoData.key)
+                        }) {
+                            Text(text = "삭제")
                         }
                     }
                 }
@@ -137,18 +138,18 @@ fun ToDo(
                         modifier = Modifier.padding(8.dp),
                         verticalAlignment = Alignment.CenterVertically
                     ) {
-                        val (text, setText) = remember { mutableStateOf(toDoData.text) }
+                        val (newText, setNewText) = remember { mutableStateOf(toDoData.text) }
                         OutlinedTextField(
-                            value = text,
-                            onValueChange = setText,
+                            value = newText,
+                            onValueChange = setNewText,
                             modifier = Modifier.weight(1f)
                         )
                         Spacer(modifier = Modifier.size(8.dp))
                         Button(onClick = {
+                            onEdit(toDoData.key, newText)
                             isEditing = false
-                            onEdit(toDoData.key, text)
                         }) {
-                            Text("완료")
+                            Text(text = "완료")
                         }
                     }
                 }
