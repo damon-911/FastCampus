@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
+import fastcampus.part4.chapter5.example.LiveDataExample
 import fastcampus.part4.chapter5.example.ViewModelExample
 import fastcampus.part4.chapter5.ui.theme.Chapter5Theme
 
@@ -20,8 +21,12 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
+                    /*
                     // ViewModel
                     ViewModelExample()
+                     */
+                    // LiveData
+                    LiveDataExample()
                 }
             }
         }
