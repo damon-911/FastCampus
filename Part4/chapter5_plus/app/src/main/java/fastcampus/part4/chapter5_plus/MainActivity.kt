@@ -7,7 +7,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import fastcampus.part4.chapter5_plus.example.CompositionLocalExample
+import fastcampus.part4.chapter5_plus.example.NavigationExample
 import fastcampus.part4.chapter5_plus.ui.theme.Chapter5_plusTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,8 +20,12 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
+                    /*
                     // CompositionLocal
                     CompositionLocalExample()
+                     */
+                    // Navigation
+                    NavigationExample()
                 }
             }
         }
