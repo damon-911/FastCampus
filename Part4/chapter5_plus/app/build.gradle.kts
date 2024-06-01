@@ -72,7 +72,7 @@ dependencies {
     // GSON
     implementation("com.google.code.gson:gson:2.10.1")
 
-    // viewModelScope
+    // ViewModelScope
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.1")
 
     implementation("androidx.core:core-ktx:1.13.1")

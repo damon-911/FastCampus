@@ -27,7 +27,7 @@ class MainActivity : ComponentActivity() {
                     CompositionLocalExample()
 
                     // Navigation
-                    NavigationExample()'
+                    NavigationExample()
                      */
                     // DI
                     DIExample()
