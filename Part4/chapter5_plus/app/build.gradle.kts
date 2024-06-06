@@ -62,7 +62,8 @@ dependencies {
     implementation("com.google.dagger:hilt-android:2.51.1")
     kapt("com.google.dagger:hilt-android-compiler:2.51.1")
 
-    // HiltViewModel 사용하기 위해 필요
+    // Hilt와 Compose Navigation 간의 통합을 지원함
+    // Compose 내에서 HiltViewModel을 보다 쉽게 사용할 수 있게 해줌
     implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
 
     // Retrofit
