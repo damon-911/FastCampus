@@ -17,10 +17,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import fastcampus.part5.chapter3.ui.theme.MovieAppTheme
 import fastcampus.part5.chapter3.ui.theme.Paddings
 import fastcampus.part5.chapter3.ui.theme.colorSchemes
-import fastcampus.part5.chapter3.ui.theme.underlinedButton
 
 @Composable
-fun UnderlinedTextButton(
+fun SecondaryBorderlessButton(
     modifier: Modifier = Modifier,
     @StringRes id: Int? = null,
     text: String = "",
@@ -33,18 +32,18 @@ fun UnderlinedTextButton(
         colors = ButtonDefaults.buttonColors(
             containerColor = MaterialTheme.colorSchemes.background,
             contentColor = MaterialTheme.colorSchemes.secondary,
-            disabledContainerColor = MaterialTheme.colorSchemes.disabledSecondary,
             disabledContentColor = MaterialTheme.colorSchemes.background,
-        )
+            disabledContainerColor = MaterialTheme.colorSchemes.disabledSecondary
+        ),
+        elevation = null
     ) {
         Row(
             horizontalArrangement = Arrangement.Center,
             verticalAlignment = Alignment.CenterVertically
         ) {
-
             Text(
                 text = id?.let { stringResource(id = id) } ?: text,
-                style = MaterialTheme.typography.underlinedButton,
+                style = MaterialTheme.typography.labelLarge,
                 modifier = Modifier.padding(Paddings.small)
             )
         }
@@ -53,10 +52,10 @@ fun UnderlinedTextButton(
 
 @Preview
 @Composable
-fun UnderlinedTextButtonPreview() {
+fun SecondaryBorderlessButtonPreview() {
     MovieAppTheme {
-        UnderlinedTextButton(
-            text = "SUBMIT"
+        SecondaryBorderlessButton(
+            text = "CANCEL"
         ) {}
     }
 }
