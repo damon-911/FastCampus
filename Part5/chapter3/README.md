@@ -7,4 +7,4 @@
 - Hilt 2.51.1 - Dependency Injection
 - Retrofit 2.9.0 - Networking
 - Gson 2.10.1 - Json Parsing
-- Lifecycle 2.8.1 - Lifecycle
+- Lifecycle 2.8.2 - Lifecycle
