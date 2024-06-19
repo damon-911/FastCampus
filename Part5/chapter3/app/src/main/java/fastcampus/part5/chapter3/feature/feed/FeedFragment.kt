@@ -6,13 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.platform.ComposeView
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
+import fastcampus.part5.chapter3.BaseFragment
 import fastcampus.part5.chapter3.feature.feed.presentation.output.FeedUiEffect
 import fastcampus.part5.chapter3.feature.feed.presentation.screen.FeedScreen
 import fastcampus.part5.chapter3.feature.feed.presentation.viewmodel.FeedViewModel
@@ -22,22 +22,26 @@ import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
-class FeedFragment : Fragment() {
+class FeedFragment : BaseFragment() {
 
     private val viewModel: FeedViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View? {
         observeUiEffects()
         return ComposeView(requireContext()).apply {
             setContent {
-                MovieAppTheme {
+                MovieAppTheme(
+                    themeState = themeViewModel.themeState.collectAsState()
+                ) {
                     FeedScreen(
                         feedStateHolder = viewModel.output.feedState.collectAsState(),
-                        input = viewModel.input
+                        input = viewModel.input,
+                        buttonColor = themeViewModel.nextColorState.collectAsState(),
+                        changeAppColor = { themeViewModel.toggleColorSet() }
                     )
                 }
             }

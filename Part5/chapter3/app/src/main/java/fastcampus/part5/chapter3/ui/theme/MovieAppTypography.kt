@@ -76,16 +76,6 @@ val Typography.myTitle: TextStyle
         fontSize = 24.sp
     )
 
-val Typography.dialogButton: TextStyle
-    @Composable get() = labelLarge.copy(
-        fontSize = 18.sp
-    )
-
-val Typography.underlinedDialogButton: TextStyle
-    @Composable get() = labelLarge.copy(
-        textDecoration = TextDecoration.Underline
-    )
-
 val Typography.underlinedButton: TextStyle
     @Composable get() = labelLarge.copy(
         textDecoration = TextDecoration.Underline

@@ -5,11 +5,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.platform.ViewCompositionStrategy
-import androidx.fragment.app.DialogFragment
 import androidx.navigation.fragment.navArgs
 import dagger.hilt.android.AndroidEntryPoint
+import fastcampus.part5.chapter3.BaseDialogFragment
 import fastcampus.part5.chapter3.R
 import fastcampus.part5.chapter3.ui.components.dialog.type.DialogPopup
 import fastcampus.part5.chapter3.ui.components.dialog.type.Rating
@@ -18,7 +19,7 @@ import fastcampus.part5.chapter3.ui.model.dialog.DialogButton
 import fastcampus.part5.chapter3.ui.theme.MovieAppTheme
 
 @AndroidEntryPoint
-class RatingDialogFragment : DialogFragment() {
+class RatingDialogFragment : BaseDialogFragment() {
 
     private val args: RatingDialogFragmentArgs by navArgs()
 
@@ -36,7 +37,9 @@ class RatingDialogFragment : DialogFragment() {
         return ComposeView(requireContext()).apply {
             setViewCompositionStrategy(ViewCompositionStrategy.DisposeOnViewTreeLifecycleDestroyed)
             setContent {
-                MovieAppTheme {
+                MovieAppTheme(
+                    themeState = themeViewModel.themeState.collectAsState()
+                ) {
                     DialogPopup.Rating(
                         movieName = args.movieName,
                         rating = args.rating,
