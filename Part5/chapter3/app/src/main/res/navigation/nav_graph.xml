@@ -7,11 +7,58 @@
     <fragment
         android:id="@+id/feed_fragment"
         android:name="fastcampus.part5.chapter3.feature.feed.FeedFragment"
-        android:label="Feed" />
+        android:label="Feed">
+        <action
+            android:id="@+id/action_feed_to_detail"
+            app:destination="@id/detail_fragment"
+            app:launchSingleTop="true" />
+        <action
+            android:id="@+id/action_feed_to_info"
+            app:destination="@id/info_fragment"
+            app:launchSingleTop="true" />
+    </fragment>
 
     <fragment
         android:id="@+id/detail_fragment"
         android:name="fastcampus.part5.chapter3.feature.detail.DetailFragment"
-        android:label="Detail" />
+        android:label="Detail">
+        <argument
+            android:name="movieName"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_detail_to_rating"
+            app:destination="@id/rating_fragment"
+            app:launchSingleTop="true" />
+        <action
+            android:id="@+id/action_detail_to_imdb_dialog"
+            app:destination="@id/imdb_fragment"
+            app:launchSingleTop="true" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/info_fragment"
+        android:name="fastcampus.part5.chapter3.feature.dialog.InfoDialogFragment"
+        android:label="Notice" />
+
+    <dialog
+        android:id="@+id/rating_fragment"
+        android:name="fastcampus.part5.chapter3.feature.dialog.RatingDialogFragment"
+        android:label="Rating">
+        <argument
+            android:name="movieName"
+            app:argType="string" />
+        <argument
+            android:name="rating"
+            app:argType="float" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/imdb_fragment"
+        android:name="fastcampus.part5.chapter3.feature.dialog.IMDBDialogFragment"
+        android:label="IMDB">
+        <argument
+            android:name="url"
+            app:argType="string" />
+    </dialog>
 
 </navigation>
