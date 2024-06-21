@@ -1,6 +1,6 @@
 package fastcampus.part5.chapter4.features.feed.presentation.output
 
-import fastcampus.part5.chapter4.features.common.entity.CategoryEntity
+import fastcampus.part5.chapter4.core.entity.CategoryEntity
 
 sealed class FeedState {
     object Loading : FeedState()

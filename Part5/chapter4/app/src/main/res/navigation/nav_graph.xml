@@ -37,7 +37,7 @@
 
     <dialog
         android:id="@+id/rating_fragment"
-        android:name="fastcampus.part5.chapter4.features.dialog.RatingDialogFragment"
+        android:name="fastcampus.part5.chapter4.features.detail.dialog.RatingDialogFragment"
         android:label="Rating">
         <argument
             android:name="restaurantName"
@@ -49,7 +49,7 @@
 
     <dialog
         android:id="@+id/map_dialog_fragment"
-        android:name="fastcampus.part5.chapter4.features.dialog.ShowMapDialogFragment"
+        android:name="fastcampus.part5.chapter4.features.detail.dialog.ShowMapDialogFragment"
         android:label="MAP">
         <argument
             android:name="url"
@@ -58,7 +58,7 @@
 
     <dialog
         android:id="@+id/info_fragment"
-        android:name="fastcampus.part5.chapter4.features.dialog.InfoDialogFragment"
+        android:name="fastcampus.part5.chapter4.features.feed.dialog.InfoDialogFragment"
         android:label="Notice" />
 
 </navigation>

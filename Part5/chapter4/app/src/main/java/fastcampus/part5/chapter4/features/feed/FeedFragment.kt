@@ -12,7 +12,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
-import fastcampus.part5.chapter4.BaseFragment
+import fastcampus.part5.chapter4.core.BaseFragment
 import fastcampus.part5.chapter4.features.feed.presentation.output.FeedUiEffect
 import fastcampus.part5.chapter4.features.feed.presentation.screen.FeedScreen
 import fastcampus.part5.chapter4.features.feed.presentation.viewmodel.FeedViewModel

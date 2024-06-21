@@ -13,7 +13,7 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import dagger.hilt.android.AndroidEntryPoint
-import fastcampus.part5.chapter4.BaseFragment
+import fastcampus.part5.chapter4.core.BaseFragment
 import fastcampus.part5.chapter4.features.detail.presentation.screen.DetailScreen
 import fastcampus.part5.chapter4.features.detail.presentation.output.DetailUiEffect
 import fastcampus.part5.chapter4.features.detail.presentation.viewmodel.DetailViewModel

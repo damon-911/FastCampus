@@ -36,7 +36,7 @@ import coil.compose.rememberAsyncImagePainter
 import coil.request.ImageRequest
 import coil.size.Scale
 import fastcampus.part5.chapter4.R
-import fastcampus.part5.chapter4.features.common.entity.RestaurantDetailEntity
+import fastcampus.part5.chapter4.core.entity.RestaurantDetailEntity
 import fastcampus.part5.chapter4.features.detail.presentation.input.IDetailViewModelInput
 import fastcampus.part5.chapter4.features.detail.presentation.output.DetailState
 import fastcampus.part5.chapter4.ui_components.components.button.PrimaryButton

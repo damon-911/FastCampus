@@ -15,3 +15,11 @@ dependencyResolutionManagement {
 
 rootProject.name = "chapter4"
 include(":app")
+include(":core")
+include(":ui_components")
+include(":features:feed")
+include(":features:detail")
+include(":libraries:network")
+include(":libraries:network-contract")
+include(":libraries:storage")
+include(":libraries:storage-contract")

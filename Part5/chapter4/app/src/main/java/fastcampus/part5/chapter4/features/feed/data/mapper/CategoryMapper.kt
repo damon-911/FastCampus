@@ -1,10 +1,10 @@
 package fastcampus.part5.chapter4.features.feed.data.mapper
 
-import fastcampus.part5.chapter4.features.common.entity.CategoryEntity
-import fastcampus.part5.chapter4.features.common.entity.EntityWrapper
-import fastcampus.part5.chapter4.features.common.entity.RestaurantDetailEntity
-import fastcampus.part5.chapter4.features.common.mapper.BaseMapper
-import fastcampus.part5.chapter4.features.common.network.model.RestaurantResponse
+import fastcampus.part5.chapter4.core.entity.CategoryEntity
+import fastcampus.part5.chapter4.core.entity.EntityWrapper
+import fastcampus.part5.chapter4.core.entity.RestaurantDetailEntity
+import fastcampus.part5.chapter4.core.mapper.BaseMapper
+import fastcampus.part5.chapter4.core.network.model.RestaurantResponse
 import fastcampus.part5.chapter4.features.feed.data.FeedConstants
 import fastcampus.part5.chapter4.libraries.storage.IStorage
 import javax.inject.Inject

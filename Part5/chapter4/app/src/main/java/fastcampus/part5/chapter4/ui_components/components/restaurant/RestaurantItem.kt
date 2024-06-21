@@ -26,7 +26,7 @@ import coil.compose.rememberAsyncImagePainter
 import coil.request.ImageRequest
 import coil.size.Scale
 import fastcampus.part5.chapter4.R
-import fastcampus.part5.chapter4.features.common.entity.RestaurantFeedItemEntity
+import fastcampus.part5.chapter4.core.entity.RestaurantFeedItemEntity
 import fastcampus.part5.chapter4.features.feed.presentation.input.IFeedViewModelInput
 import fastcampus.part5.chapter4.ui_components.theme.Paddings
 

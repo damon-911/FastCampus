@@ -3,7 +3,7 @@ package fastcampus.part5.chapter4.features.feed.presentation.viewmodel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import fastcampus.part5.chapter4.features.common.entity.EntityWrapper
+import fastcampus.part5.chapter4.core.entity.EntityWrapper
 import fastcampus.part5.chapter4.features.feed.domain.usecase.IGetFeedCategoryUseCase
 import fastcampus.part5.chapter4.features.feed.presentation.input.IFeedViewModelInput
 import fastcampus.part5.chapter4.features.feed.presentation.output.FeedState

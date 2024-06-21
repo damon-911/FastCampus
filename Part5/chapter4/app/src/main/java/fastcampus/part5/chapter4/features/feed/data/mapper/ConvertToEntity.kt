@@ -1,9 +1,9 @@
 package fastcampus.part5.chapter4.features.feed.data.mapper
 
-import fastcampus.part5.chapter4.features.common.entity.CategoryEntity
-import fastcampus.part5.chapter4.features.common.entity.RestaurantDetailEntity
-import fastcampus.part5.chapter4.features.common.entity.RestaurantFeedItemEntity
-import fastcampus.part5.chapter4.features.common.network.model.RestaurantResponse
+import fastcampus.part5.chapter4.core.entity.CategoryEntity
+import fastcampus.part5.chapter4.core.entity.RestaurantDetailEntity
+import fastcampus.part5.chapter4.core.entity.RestaurantFeedItemEntity
+import fastcampus.part5.chapter4.core.network.model.RestaurantResponse
 
 fun RestaurantResponse.toDetailEntity(): RestaurantDetailEntity = RestaurantDetailEntity(
     id = this.id,
@@ -19,13 +19,13 @@ fun RestaurantResponse.toDetailEntity(): RestaurantDetailEntity = RestaurantDeta
 )
 
 fun RestaurantResponse.LatLngResponse.toEntity(): RestaurantDetailEntity.LatLngEntity =
-    RestaurantDetailEntity.LatLngEntity(
+    fastcampus.part5.chapter4.core.entity.RestaurantDetailEntity.LatLngEntity(
         lat = this.lat,
         lng = this.lng
     )
 
 fun RestaurantResponse.OperatingHoursResponse.toEntity(): RestaurantDetailEntity.OperatingHoursEntity =
-    RestaurantDetailEntity.OperatingHoursEntity(
+    fastcampus.part5.chapter4.core.entity.RestaurantDetailEntity.OperatingHoursEntity(
         monday = this.monday,
         tuesday = this.tuesday,
         wednesday = this.wednesday,
@@ -36,7 +36,7 @@ fun RestaurantResponse.OperatingHoursResponse.toEntity(): RestaurantDetailEntity
     )
 
 fun RestaurantResponse.ReviewResponse.toEntity(): RestaurantDetailEntity.ReviewEntity =
-    RestaurantDetailEntity.ReviewEntity(
+    fastcampus.part5.chapter4.core.entity.RestaurantDetailEntity.ReviewEntity(
         name = this.name,
         date = this.date,
         rating = this.rating,

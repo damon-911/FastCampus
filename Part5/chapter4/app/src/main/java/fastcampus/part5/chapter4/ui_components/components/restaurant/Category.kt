@@ -9,7 +9,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import fastcampus.part5.chapter4.features.common.entity.CategoryEntity
+import fastcampus.part5.chapter4.core.entity.CategoryEntity
 import fastcampus.part5.chapter4.features.feed.presentation.input.IFeedViewModelInput
 import fastcampus.part5.chapter4.ui_components.theme.Paddings
 
