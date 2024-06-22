@@ -1,4 +1,4 @@
-package fastcampus.part5.chapter4.libraries.storage.di
+package fastcampus.part5.chapter4.di
 
 import dagger.Module
 import dagger.Provides

@@ -3,6 +3,7 @@ package fastcampus.part5.chapter4
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import dagger.hilt.android.AndroidEntryPoint
+import fastcampus.part5.chapter4.app.R
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {

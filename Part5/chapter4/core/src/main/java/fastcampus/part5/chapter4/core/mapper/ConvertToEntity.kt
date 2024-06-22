@@ -19,13 +19,13 @@ fun RestaurantResponse.toDetailEntity(): RestaurantDetailEntity = RestaurantDeta
 )
 
 fun RestaurantResponse.LatLngResponse.toEntity(): RestaurantDetailEntity.LatLngEntity =
-    fastcampus.part5.chapter4.core.entity.RestaurantDetailEntity.LatLngEntity(
+    RestaurantDetailEntity.LatLngEntity(
         lat = this.lat,
         lng = this.lng
     )
 
 fun RestaurantResponse.OperatingHoursResponse.toEntity(): RestaurantDetailEntity.OperatingHoursEntity =
-    fastcampus.part5.chapter4.core.entity.RestaurantDetailEntity.OperatingHoursEntity(
+    RestaurantDetailEntity.OperatingHoursEntity(
         monday = this.monday,
         tuesday = this.tuesday,
         wednesday = this.wednesday,
@@ -36,7 +36,7 @@ fun RestaurantResponse.OperatingHoursResponse.toEntity(): RestaurantDetailEntity
     )
 
 fun RestaurantResponse.ReviewResponse.toEntity(): RestaurantDetailEntity.ReviewEntity =
-    fastcampus.part5.chapter4.core.entity.RestaurantDetailEntity.ReviewEntity(
+    RestaurantDetailEntity.ReviewEntity(
         name = this.name,
         date = this.date,
         rating = this.rating,
