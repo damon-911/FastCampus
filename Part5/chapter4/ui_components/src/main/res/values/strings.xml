@@ -1,3 +1,18 @@
 <resources>
-    <string name="app_name">ui_components</string>
+    <string name="app_name">Restaurant App</string>
+
+    <!-- Rating Popup -->
+    <string name="rate_title">Rate your score!</string>
+
+    <!-- Map Popup -->
+    <string name="map_title">Open Map</string>
+    <string name="map_message">This will open the map page in the external web browser. Are you okay?</string>
+
+    <!-- Info Popup -->
+    <string name="info_message">This App is to build beautiful structure of Android app which uses Jetpack Compose.</string>
+
+    <string name="open">Open</string>
+    <string name="submit">Submit</string>
+    <string name="cancel">Cancel</string>
+    <string name="close">Close</string>
 </resources>
