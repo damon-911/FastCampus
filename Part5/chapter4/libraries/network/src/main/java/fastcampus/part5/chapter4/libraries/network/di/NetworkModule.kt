@@ -7,8 +7,6 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import fastcampus.part5.chapter4.libraries.network.BuildConfig
 import fastcampus.part5.chapter4.libraries.network.api.ApiService
-import fastcampus.part5.chapter4.libraries.network_contract.api.NetworkRequestFactory
-import fastcampus.part5.chapter4.libraries.network.retrofit.NetworkRequestFactoryImpl
 import fastcampus.part5.chapter4.libraries.network.retrofit.StringConverterFactory
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
