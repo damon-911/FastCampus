@@ -86,7 +86,7 @@ sealed class ColorSet {
             ),
             success = Green400,
             disabledSecondary = Purple700,
-            textFiledBackground = Grey200
+            textFiledBackground = Grey100
         )
 
         override var MyDarkColorScheme = MyColors(

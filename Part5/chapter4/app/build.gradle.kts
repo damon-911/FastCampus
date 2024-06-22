@@ -5,7 +5,21 @@ plugins {
 apply("../base-build.gradle")
 
 android {
-    namespace = "fastcampus.part5.chapter4.app"
+    namespace = "fastcampus.part5.chapter4"
+
+    flavorDimensions += "theme"
+
+    productFlavors {
+        create("red") {
+            isDefault = true
+            dimension = "theme"
+            applicationId = "fastcampus.part5.chapter4.red"
+        }
+        create("blue") {
+            dimension = "theme"
+            applicationId = "fastcampus.part5.chapter4.blue"
+        }
+    }
 }
 
 dependencies {
