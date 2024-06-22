@@ -37,8 +37,8 @@ class RatingDialogFragment : fastcampus.part5.chapter4.core.BaseDialogFragment()
                     themeState = themeViewModel.themeState.collectAsState()
                 ) {
                     DialogPopup.Rating(
-                        restaurantName = args.restaurantName,
-                        rating = args.rating,
+                        restaurantName = arguments?.getString("restaurantName") ?: "",
+                        rating = arguments?.getFloat("rating") ?: 0.0f,
                         buttons = listOf(
                             DialogButton.Primary(
                                 title = getString(R.string.submit),

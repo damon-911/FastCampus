@@ -55,13 +55,13 @@ class FeedFragment : fastcampus.part5.chapter4.core.BaseFragment() {
                     when (it) {
                         is FeedUiEffect.OpenRestaurantDetail -> {
                             navController.safeNavigate(
-                                FeedFragmentDirections.actionFeedToDetail(it.id)
+                                url = "App://Detail/${it.id}"
                             )
                         }
 
                         is FeedUiEffect.OpenInfoDialog -> {
                             navController.safeNavigate(
-                                FeedFragmentDirections.actionFeedToInfo()
+                                url = "App://Notice"
                             )
                         }
                     }

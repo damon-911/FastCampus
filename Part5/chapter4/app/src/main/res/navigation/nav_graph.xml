@@ -8,14 +8,8 @@
         android:id="@+id/feed_fragment"
         android:name="fastcampus.part5.chapter4.features.feed.FeedFragment"
         android:label="Feed">
-        <action
-            android:id="@+id/action_feed_to_detail"
-            app:destination="@id/detail_fragment"
-            app:launchSingleTop="true" />
-        <action
-            android:id="@+id/action_feed_to_info"
-            app:destination="@id/info_fragment"
-            app:launchSingleTop="true" />
+
+        <deepLink app:uri="App://Feed" />
     </fragment>
 
     <fragment
@@ -25,14 +19,8 @@
         <argument
             android:name="id"
             app:argType="integer" />
-        <action
-            android:id="@+id/action_detail_to_rating"
-            app:destination="@id/rating_fragment"
-            app:launchSingleTop="true" />
-        <action
-            android:id="@+id/action_detail_to_map_dialog"
-            app:destination="@id/map_dialog_fragment"
-            app:launchSingleTop="true" />
+
+        <deepLink app:uri="App://Detail/{id}" />
     </fragment>
 
     <dialog
@@ -45,6 +33,8 @@
         <argument
             android:name="rating"
             app:argType="float" />
+
+        <deepLink app:uri="App://Rating/{restaurantName}/{rating}" />
     </dialog>
 
     <dialog
@@ -54,6 +44,8 @@
         <argument
             android:name="url"
             app:argType="string" />
+
+        <deepLink app:uri="App://Map/{url}" />
     </dialog>
 
     <dialog
@@ -61,4 +53,5 @@
         android:name="fastcampus.part5.chapter4.features.feed.dialog.InfoDialogFragment"
         android:label="Notice" />
 
+    <deepLink app:uri="App://Notice" />
 </navigation>
