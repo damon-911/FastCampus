@@ -1,11 +1,11 @@
-package fastcampus.part5.chapter4.features.feed.data.mapper
+package fastcampus.part5.chapter4.core.mapper
 
 import fastcampus.part5.chapter4.core.entity.CategoryEntity
 import fastcampus.part5.chapter4.core.entity.EntityWrapper
 import fastcampus.part5.chapter4.core.entity.RestaurantDetailEntity
-import fastcampus.part5.chapter4.core.mapper.BaseMapper
 import fastcampus.part5.chapter4.core.network.model.RestaurantResponse
 import fastcampus.part5.chapter4.libraries.storage_contract.IStorage
+import fastcampus.part5.chapter4.libraries.storage_contract.constants.StorageKey
 import javax.inject.Inject
 
 class CategoryMapper @Inject constructor(
@@ -22,7 +22,7 @@ class CategoryMapper @Inject constructor(
                         addAll(model.map { item -> item.toDetailEntity() })
                     }
                     .also {
-                        storage.save(FeedConstants.RESTAURANT_LIST_KEY, it)
+                        storage.save(StorageKey.RESTAURANT_LIST_KEY, it)
                     }
                     .toCategoryList()
             )

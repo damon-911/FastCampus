@@ -10,7 +10,7 @@ import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.platform.ViewCompositionStrategy
 import androidx.compose.ui.res.stringResource
 import dagger.hilt.android.AndroidEntryPoint
-import fastcampus.part5.chapter4.R
+import fastcampus.part5.chapter4.ui_components.R
 import fastcampus.part5.chapter4.ui_components.components.dialog.type.Alert
 import fastcampus.part5.chapter4.ui_components.components.dialog.type.DialogPopup
 import fastcampus.part5.chapter4.ui_components.model.dialog.DialogButton

@@ -1,4 +1,4 @@
-package fastcampus.part5.chapter4.features.feed.data.mapper
+package fastcampus.part5.chapter4.core.mapper
 
 import fastcampus.part5.chapter4.core.entity.CategoryEntity
 import fastcampus.part5.chapter4.core.entity.RestaurantDetailEntity
