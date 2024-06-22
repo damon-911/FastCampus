@@ -47,16 +47,18 @@ class DetailViewModel @Inject constructor(
     }
 
     override fun googleMapClicked() {
-//        viewModelScope.launch {
-//            if (detailState.value is DetailState.Main) {
-//                val value = detailState.value as DetailState.Main
-//                _detailUiEffect.emit(
-//                    DetailUiEffect.OpenUrl(
-//                        value.detailEntity
-//                    )
-//                )
-//            }
-//        }
+        viewModelScope.launch {
+            if (detailState.value is DetailState.Main) {
+                val value = detailState.value as DetailState.Main
+                _detailUiEffect.emit(
+                    DetailUiEffect.OpenUrl(
+                        // 현재 Url 정보가 없음
+                        // 임의로 address 정보로 넣었음
+                        value.detailEntity.address
+                    )
+                )
+            }
+        }
     }
 
     override fun rateClicked() {

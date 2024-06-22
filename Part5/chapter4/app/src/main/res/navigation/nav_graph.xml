@@ -51,7 +51,9 @@
     <dialog
         android:id="@+id/info_fragment"
         android:name="fastcampus.part5.chapter4.features.feed.dialog.InfoDialogFragment"
-        android:label="Notice" />
+        android:label="Notice">
 
-    <deepLink app:uri="App://Notice" />
+        <deepLink app:uri="App://Notice" />
+    </dialog>
+
 </navigation>
